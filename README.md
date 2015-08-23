@@ -13,6 +13,7 @@ Out of memory exploratory data management. You have multi-terabyte sized data fi
 * [TextQL](https://github.com/dinedal/textql) - Also great and also a bit verbose
 * [csvkit](https://github.com/onyxfish/csvkit) - Wonderful toolkit in general, but after reviewing the code it looks like it would choke on out of memory files. csvkit does a lot, so I want to see how it performs, it may do too much.
 * [bubbles](http://bubbles.databrewery.org/)
+* [luigi](https://github.com/spotify/luigi)
 
 # How can we solve the issues with alternatives?
 ## Verbosity 
