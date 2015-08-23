@@ -28,7 +28,10 @@ udpy sel "variable1" | udpy fil "variable2==2"
 
 udpy fil "variable2==2" | udpy fil "variable1"
 
-To take the burden off the user, we can use introspective dynamic optimization. That is, every function monitors its speed and attempts to set memory use parameters that optimize speed. This is concurrent chaos where little is guaranteed, but SHOULD do a decent job with thorough integraton testing.
+To take the burden off the user, we can use introspective dynamic optimization. That is, every function monitors its speed and attempts to set memory use parameters that optimize speed. This is concurrent chaos where little is guaranteed, but SHOULD do a decent job with thorough integration testing.
+
+## Extensibility
+We only want to abstract away details related to memory use and split-apply-combine/mapreduce. Ultimately, perserving python functionality would be ideal. This could be done by parsing expressions passed to the utility, such as udpy mut "var2=var1+1", or allowing a python script to be passed in that accepts named columns as parameters.
 
 # Basic commands
 udpy sel "v1,v2"
@@ -42,3 +45,5 @@ udpy mut "\<expression\>"
 udpy sum "\<expression\>"
 
 udpy gby "v1,v2"
+
+udpy sam "5%"
