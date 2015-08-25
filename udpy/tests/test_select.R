@@ -6,13 +6,13 @@ names(data.data) <- data.names
 data.data <- data.data %>% head(5)
 
 #Generate comma separated source data
-data.data %>% write.csv(file = "data/iris_test.csv")
+data.data %>% write.csv(file = "data/iris_test.csv", row.names = FALSE)
 
 #Generate tab separated source data
-data.data %>% write.table(file = "data/iris_test.tsv", sep = "\t")
+data.data %>% write.table(file = "data/iris_test.tsv", sep = "\t", row.names = FALSE)
 
 #Generate data to test numeric column selection
-data.data %>% dplyr::select(sepal_length) %>% write.csv(file = "data/iris_select_sepal_length.csv")
+data.data %>% dplyr::select(sepal_length) %>% write.csv(file = "data/iris_select_sepal_length.csv", row.names = FALSE)
 
 #Generate data to test text column selection
-data.data %>% dplyr::select(class) %>% write.csv(file = "data/iris_select_class.csv")
+data.data %>% dplyr::select(class) %>% write.csv(file = "data/iris_select_class.csv", row.names = FALSE)
